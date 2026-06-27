@@ -29,6 +29,47 @@ p {
   color: #333;
 }
 
+
+/* =========================
+   SOCIAL FLOAT ICONS
+========================= */
+
+.social-float {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.social-float a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+
+  border-radius: 50%;
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 14px;
+
+  transition: all 0.2s ease;
+}
+
+.social-float a:hover {
+  background: #f57c00; /* fish frenzy orange */
+  transform: scale(1.1);
+}
+
+
 /* =========================
    QUICK INFO BAR
 ========================= */
