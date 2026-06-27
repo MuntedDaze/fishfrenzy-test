@@ -40,7 +40,6 @@ p {
   background-position: center;
 
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +47,7 @@ p {
 
   min-height: 85vh;
   padding: 20px;
+  overflow: hidden;
 }
 
 /* dark overlay for readability */
@@ -56,16 +56,14 @@ p {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
-}
-
-/* keep content above overlay */
-.hero * {
-  position: relative;
   z-index: 1;
 }
 
+/* keep content above overlay */
 .hero-content {
   max-width: 800px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero h1 {
