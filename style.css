@@ -201,7 +201,8 @@ p {
 /* CLEAN HOVER (BETTER UX) */
 .btn:hover {
   transform: translateY(-3px);
-  background: #092f6f;
+  background: var(--ff-orange);
+  border-color: var(--ff-orange);
 }
 
 /* secondary buttons stay simple */
