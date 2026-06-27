@@ -39,8 +39,6 @@ p {
   background-image: url("https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=2000&q=80");
   background-size: cover;
   background-position: center;
-  position: relative;
-}
 
   display: flex;
   align-items: center;
