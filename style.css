@@ -120,6 +120,11 @@ p {
    BUTTONS
 ========================= */
 
+:root {
+  --ff-blue: #0b3d91;
+  --ff-orange: #f57c00;
+}
+
 .hero-buttons {
   margin-top: 30px;
 }
@@ -127,22 +132,36 @@ p {
 .btn {
   display: inline-block;
   padding: 12px 18px;
-  background: #0b3d91;
-  color: white;
+
+  background: var(--ff-blue);
+  color: var(--ff-orange);
+
   text-decoration: none;
   margin: 5px;
   border-radius: 10px;
+
   transition: all 0.25s ease;
-  font-weight: 500;
+  font-weight: 600;
+
+  border: 1px solid transparent;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  opacity: 0.9;
+  background: #092f70; /* slightly deeper blue */
+  color: #fff;         /* flips on hover for clarity */
 }
 
+/* optional: remove secondary entirely OR keep as subtle outline */
 .btn.secondary {
-  background: #555;
+  background: transparent;
+  border: 1px solid var(--ff-blue);
+  color: var(--ff-blue);
+}
+
+.btn.secondary:hover {
+  background: var(--ff-blue);
+  color: #fff;
 }
 
 /* =========================
