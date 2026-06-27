@@ -192,6 +192,7 @@ p {
 .btn:hover {
   color: var(--ff-orange);
   transform: translateY(-3px);
+  text-shadow: 0 0 8px rgba(245,124,0,0.4);
 }
 
 /* SECONDARY BUTTON */
