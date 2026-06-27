@@ -188,24 +188,20 @@ p {
   transition: all 0.25s ease;
 }
 
-/* PRIMARY BUTTON HOVER */
+/* 🔥 HOVER = TEXT ONLY */
 .btn:hover {
-  background: var(--ff-orange);
-  border-color: var(--ff-orange);
+  color: var(--ff-orange);
   transform: translateY(-3px);
 }
 
-/* SECONDARY BUTTON (clean outline style) */
+/* SECONDARY BUTTON */
 .btn.secondary {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.6);
+  background: #555;
   color: #fff;
 }
 
 .btn.secondary:hover {
-  background: var(--ff-orange);
-  border-color: var(--ff-orange);
-  color: #fff;
+  color: var(--ff-orange);
 }
 
 /* =========================
