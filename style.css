@@ -46,15 +46,14 @@ p {
   position: absolute;
   top: 15px;
   left: 15px;
-
   display: flex;
-  gap: 12px;
+  gap: 14px;
   z-index: 5;
 }
 
 .social-float a {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
 
   display: flex;
   align-items: center;
@@ -70,12 +69,14 @@ p {
   transition: all 0.2s ease;
 }
 
+/* ICON SIZE INSIDE CIRCLE (BIGGER) */
 .social-float a svg {
-  width: 34px;
-  height: 34px;
+  width: 40px;
+  height: 40px;
   fill: white;
 }
 
+/* HOVER */
 .social-float a:hover {
   background: var(--ff-orange);
   transform: translateY(-2px) scale(1.08);
@@ -191,11 +192,10 @@ p {
   transition: all 0.25s ease;
 }
 
-/* 🔥 HOVER = TEXT ONLY */
+/* HOVER = ONLY TEXT TURNS ORANGE */
 .btn:hover {
   color: var(--ff-orange);
   transform: translateY(-3px);
-  text-shadow: 0 0 8px rgba(245,124,0,0.4);
 }
 
 /* SECONDARY BUTTON */
