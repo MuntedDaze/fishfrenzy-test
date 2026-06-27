@@ -35,10 +35,11 @@ p {
 ========================= */
 
 .hero {
-  height: 85vh;
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+}
 
   display: flex;
   align-items: center;
@@ -51,14 +52,7 @@ p {
 
 /* dark overlay for readability */
 .hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(0,0,0,0.55),
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.55)
-  );
+  background: rgba(0,0,0,0.5);
 }
 
 .hero-content {
