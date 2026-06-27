@@ -246,6 +246,45 @@ p {
   box-shadow: 0 15px 30px rgba(0,0,0,0.10);
 }
 
+.menu-category {
+  margin-top: 40px;
+}
+
+.menu-category h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.menu-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  gap: 10px;
+}
+
+.menu-title span {
+  white-space: nowrap;
+  color: #0b3d91;
+}
+
+.menu-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.menu-note {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
 /* =========================
    PHOTOS
 ========================= */
