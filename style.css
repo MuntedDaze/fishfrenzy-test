@@ -306,8 +306,7 @@ p {
 }
 
 .sticky-call:hover {
-  background: var(--ff-orange);
-  color: #fff;
+  color: var(--ff-orange);
   transform: translateY(-3px);
 }
 
