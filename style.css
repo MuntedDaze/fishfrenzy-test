@@ -134,34 +134,25 @@ p {
   padding: 12px 18px;
 
   background: var(--ff-blue);
-  color: var(--ff-orange);
+  color: #fff;
 
   text-decoration: none;
   margin: 5px;
   border-radius: 10px;
 
   transition: all 0.25s ease;
-  font-weight: 600;
-
+  font-weight: 500;
   border: 1px solid transparent;
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  background: #092f70; /* slightly deeper blue */
-  color: #fff;         /* flips on hover for clarity */
+  color: var(--ff-orange);
 }
 
-/* optional: remove secondary entirely OR keep as subtle outline */
+/* keep secondary as-is (optional, you can remove later) */
 .btn.secondary {
-  background: transparent;
-  border: 1px solid var(--ff-blue);
-  color: var(--ff-blue);
-}
-
-.btn.secondary:hover {
-  background: var(--ff-blue);
-  color: #fff;
+  background: #555;
 }
 
 /* =========================
