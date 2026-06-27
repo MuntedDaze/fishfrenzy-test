@@ -293,18 +293,22 @@ p {
   position: fixed;
   bottom: 15px;
   right: 15px;
-
   background: var(--ff-blue);
   color: white;
-
   padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   z-index: 999;
+  transition: all 0.25s ease;
+}
+
+.sticky-call:hover {
+  background: var(--ff-orange);
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 /* =========================
