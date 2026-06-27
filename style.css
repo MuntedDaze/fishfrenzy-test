@@ -46,36 +46,39 @@ p {
   position: absolute;
   top: 15px;
   left: 15px;
+
   display: flex;
-  gap: 10px;
+  gap: 12px;
   z-index: 5;
 }
 
 .social-float a {
-  width: 42px;
-  height: 42px;
+  width: 60px;
+  height: 60px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 50%;
 
   color: white;
+  border-radius: 50%;
   text-decoration: none;
+
   transition: all 0.2s ease;
+}
+
+.social-float a svg {
+  width: 26px;
+  height: 26px;
+  fill: white;
 }
 
 .social-float a:hover {
   background: var(--ff-orange);
-  transform: translateY(-2px) scale(1.05);
-}
-
-.social-float a svg {
-  width: 18px;
-  height: 18px;
-  fill: white;
+  transform: translateY(-2px) scale(1.08);
 }
 
 /* =========================
