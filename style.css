@@ -298,12 +298,16 @@ p {
 .photo {
   flex: 1;
   min-width: 150px;
-  height: 120px;
-  background: #ddd;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.photo:hover {
+  transform: scale(1.03);
 }
 
 /* =========================
