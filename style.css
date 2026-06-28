@@ -364,9 +364,11 @@ p {
 ========================= */
 
 footer {
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
   text-align: center;
   padding: 25px;
   background: #222;
   color: white;
-  margin-top: 40px;
+  border-radius: 10px;
 }
