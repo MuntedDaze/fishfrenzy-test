@@ -1,4 +1,25 @@
 /* =========================
+   PAGE FIX (IMPORTANT)
+========================= */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* makes page stretch properly */
+main {
+  flex: 1;
+}
+
+
+/* =========================
    BASE / GLOBAL STYLES
 ========================= */
 
@@ -360,21 +381,6 @@ p {
 }
 
 /* =========================
-   FOOTER
-========================= */
-
-footer {
-  width: 100%;
-  margin-top: 40px;
-  padding: 40px 20px;
-  background: #222;
-  color: white;
-  text-align: center;
-  border-top: 4px solid var(--ff-orange);
-  box-sizing: border-box;
-}
-
-/* =========================
    FOOTER (FULL WIDTH FIX)
 ========================= */
 
@@ -435,13 +441,4 @@ footer {
   margin-top: 15px;
   font-size: 13px;
   opacity: 0.7;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  min-height: 100vh;
-  background: #222; /* matches footer */
 }
