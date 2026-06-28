@@ -377,12 +377,13 @@ p {
   background: rgba(255,255,255,0.12);
   border-radius: 50%;
   transition: all 0.2s ease;
+  color: #fff;
 }
 
 .footer-social a svg {
   width: 26px;
   height: 26px;
-  fill: white;
+  fill: currentColor;
 }
 
 .footer-social a:hover {
