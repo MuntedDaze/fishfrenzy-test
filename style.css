@@ -414,10 +414,15 @@ p {
 ========================= */
 
 @media (max-width: 600px) {
-.section {
-  padding: 20px 14px;
-}
+   
+   .section {
+      padding: 20px 14px;
+   }
 
+   .hero-logo {
+      max-width: 220px;
+   }
+   
    .hero {
       min-height: 70vh;
       padding: 14px;
