@@ -106,6 +106,18 @@ p {
   color: var(--ff-orange);
 }
 
+.email-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email-link:hover {
+  color: var(--ff-orange);
+}
+
 /* =========================
    HERO
 ========================= */
