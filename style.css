@@ -286,13 +286,13 @@ p {
 .menu-item p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #111;
+  color: #fff;
 }
 
 .menu-note {
   margin-top: 30px;
   font-size: 13px;
-  color: #fff;
+  color: #111;
 }
 
 /* =========================
