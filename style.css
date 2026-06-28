@@ -57,20 +57,22 @@ p {
 ========================= */
 
 .section {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: clamp(50px, 8vw, 80px) 20px;
+   width: 100%;
+   max-width: 1400px;
+   margin: 0 auto;
+   padding: clamp(50px, 8vw, 80px) 20px;
+   margin-bottom: 30px;
 }
 
 .section.light {
-  background: #f9f9f9;
+   background: #f9f9f9;
 }
 
 .container {
-  background: #fff;
-  border-radius: 12px;
-  padding: 40px;
+   background: #fff;
+   border-radius: 14px;
+   padding: clamp(25px, 4vw, 50px);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* =========================
@@ -437,5 +439,9 @@ p {
   .menu-title {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+   .container {
+      padding: 25px;
   }
 }
