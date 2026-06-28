@@ -69,14 +69,12 @@ p {
   transition: all 0.2s ease;
 }
 
-/* ICON SIZE INSIDE CIRCLE (BIGGER) */
 .social-float a svg {
   width: 40px;
   height: 40px;
   fill: white;
 }
 
-/* HOVER */
 .social-float a:hover {
   background: var(--ff-orange);
   transform: translateY(-2px) scale(1.08);
@@ -192,13 +190,11 @@ p {
   transition: all 0.25s ease;
 }
 
-/* HOVER = ONLY TEXT TURNS ORANGE */
 .btn:hover {
   color: var(--ff-orange);
   transform: translateY(-3px);
 }
 
-/* SECONDARY BUTTON */
 .btn.secondary {
   background: #555;
   color: #fff;
