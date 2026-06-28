@@ -85,7 +85,7 @@ p {
   display: flex;
   justify-content: center;
   padding: 14px 18px;
-  background: #111;
+  background: #222;
   color: #fff;
   font-size: 14px;
   gap: 20px;
@@ -217,7 +217,7 @@ p {
 }
 
 .btn.secondary {
-  background: #555;
+  background: #444;
   color: #fff;
 }
 
