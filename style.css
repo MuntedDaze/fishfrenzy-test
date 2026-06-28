@@ -374,7 +374,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(255,255,255,0.12);
   border-radius: 50%;
   transition: all 0.2s ease;
 }
