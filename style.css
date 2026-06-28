@@ -374,39 +374,3 @@ footer {
   color: white;
   margin-top: 40px;
 }
-
-/* =========================
-   MOBILE MENU ACCORDION (ADDED - SAFE)
-========================= */
-
-.menu-toggle {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-content {
-  display: block;
-}
-
-/* MOBILE ONLY */
-@media (max-width: 768px) {
-
-  .menu-content {
-    display: none;
-  }
-
-  .menu-category.active .menu-content {
-    display: block;
-  }
-
-  .menu-toggle::after {
-    content: "+";
-    font-size: 18px;
-  }
-
-  .menu-category.active .menu-toggle::after {
-    content: "−";
-  }
-}
