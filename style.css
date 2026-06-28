@@ -281,7 +281,7 @@ p {
   margin-bottom: 15px;
 }
 
-/* MAIN ROW LAYOUT */
+/* MAIN ROW */
 .menu-item {
   display: flex;
   justify-content: space-between;
@@ -290,7 +290,7 @@ p {
   border-bottom: 1px solid var(--ff-orange);
 }
 
-/* LEFT SIDE */
+/* LEFT SIDE (everything except price) */
 .menu-left {
   display: flex;
   flex-direction: column;
@@ -298,33 +298,36 @@ p {
   flex: 1;
 }
 
+/* title */
 .menu-title {
   font-weight: 600;
   color: #fff;
 }
 
-.add-salad {
-  font-size: 0.85rem;
-  opacity: 0.7;
+/* DESCRIPTION + ADD SALAD MATCH <p> */
+.menu-left p {
+  margin: 0;
+  font-size: 14px;
   color: #fff;
+  opacity: 0.9;
 }
 
-/* RIGHT SIDE */
+/* RIGHT SIDE (prices only) */
 .menu-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  text-align: right;
   min-width: 90px;
 }
 
-/* PRICES */
+/* prices */
 .price {
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
 }
 
+/* second price (add salad price) */
 .price + .price {
   font-size: 0.85rem;
   opacity: 0.7;
