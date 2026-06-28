@@ -6,7 +6,7 @@
   --ff-blue: #0b3d91;
   --ff-orange: #f57c00;
 
-  --max-width: 1200px;
+  --max-width: 1400px;
 }
 
 /* =========================
@@ -327,7 +327,9 @@ p {
   margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
-  width: 100%;
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .map iframe {
