@@ -409,42 +409,27 @@ p {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 900px) {
-  .section {
-    padding: 60px 18px;
-  }
-
-  .hero {
-    min-height: 75vh;
-  }
-}
-
 @media (max-width: 600px) {
   .section {
-    padding: 18px 14px;
+    padding: 14px;
   }
 
-  .section + .section {
-    margin-top: 6px;
-  }
-   
    .hero {
       min-height: 70vh;
-      padding: 15px;
+      padding: 14px;
    }
 
-   
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-}
+   .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+   }
 
-  .btn {
-    width: 70%;
-    text-align: center;
-  }
+   .btn {
+      width: 70%;
+      text-align: center;
+   }
 
   .photo {
     min-width: 100%;
