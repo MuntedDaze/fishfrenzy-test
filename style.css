@@ -37,10 +37,10 @@ img {
 }
 
 h1, h2, h3 {
-   font-weight: 600;
-   letter-spacing: 0.3px;
-   color: var(--ff-orange);
-   margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--ff-orange);
+  margin: 0;
 }
 
 h2 {
@@ -59,7 +59,7 @@ p {
 
 .section {
   width: 100%;
-  max-width: 1400px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 40px 20px;
 }
@@ -70,7 +70,7 @@ p {
 
 .section.dark {
   background: #444;
-  color: white;
+  color: #fff;
 }
 
 .container {
@@ -85,12 +85,12 @@ p {
 .quick-info {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 14px 18px;
   background: #222;
   color: #fff;
   font-size: 14px;
-  gap: 20px;
-  flex-wrap: wrap;
   text-align: center;
 }
 
@@ -144,10 +144,14 @@ p {
   max-width: 800px;
   position: relative;
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+}
+
+.hero-logo {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .hero h1 {
@@ -157,18 +161,11 @@ p {
 }
 
 .hero p {
-  margin: 0;
   font-size: clamp(16px, 2vw, 20px);
+  margin-top: 10px;
   color: #fff;
   opacity: 0.95;
 }
-
-.hero-logo {
-  max-width: 320px;
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
 
 /* =========================
    SOCIAL FLOAT ICONS
@@ -230,12 +227,6 @@ p {
 
 .btn.secondary {
   background: #555;
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  color: var(--ff-orange);
-  transform: translateY(-3px);
 }
 
 /* =========================
@@ -282,16 +273,15 @@ p {
 }
 
 .menu-title {
-   display: flex;
-   justify-content: space-between;
-   font-weight: 600;
-   color: #fff;
-   gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: #fff;
+  gap: 10px;
 }
 
 .menu-title span {
   white-space: nowrap;
-  color: #fff;
 }
 
 .menu-item p {
@@ -349,12 +339,6 @@ p {
   border: 0;
 }
 
-@media (max-width: 600px) {
-  .map iframe {
-    height: 300px;
-  }
-}
-
 /* =========================
    FOOTER
 ========================= */
@@ -387,7 +371,6 @@ p {
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
-  flex-direction: row;
 }
 
 .footer-social a {
@@ -418,31 +401,31 @@ p {
 ========================= */
 
 @media (max-width: 600px) {
-   
-   .section {
-      padding: 20px 14px;
-   }
 
-   .hero-logo {
-      max-width: 220px;
-   }
-   
-   .hero {
-      min-height: 70vh;
-      padding: 14px;
-   }
+  .section {
+    padding: 20px 14px;
+  }
 
-   .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 5px;
-   }
+  .hero {
+    min-height: 70vh;
+    padding: 14px;
+  }
 
-   .btn {
-      width: 70%;
-      text-align: center;
-   }
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .btn {
+    width: 70%;
+    text-align: center;
+  }
 
   .photo {
     min-width: 100%;
@@ -457,7 +440,7 @@ p {
     align-items: flex-start;
   }
 
-   .container {
-      padding: 14px;
+  .container {
+    padding: 14px;
   }
 }
