@@ -243,6 +243,15 @@ p {
   background: #555;
 }
 
+.pdf-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 /* =========================
    STICKY CALL
 ========================= */
