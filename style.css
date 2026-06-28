@@ -217,7 +217,7 @@ p {
 }
 
 .btn.secondary {
-  background: #444;
+  background: #555;
   color: #fff;
 }
 
@@ -235,7 +235,7 @@ p {
   bottom: 15px;
   right: 15px;
   background: var(--ff-blue);
-  color: white;
+  color: #fff;
   padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
@@ -284,13 +284,13 @@ p {
 .menu-item p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #555;
+  color: #fff;
 }
 
 .menu-note {
   margin-top: 30px;
   font-size: 13px;
-  color: #666;
+  color: #fff;
 }
 
 /* =========================
