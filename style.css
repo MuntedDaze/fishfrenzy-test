@@ -374,7 +374,7 @@ p {
 }
 
 /* =========================
-   FOOTER SOCIAL (FIXED LAYOUT)
+   FOOTER SOCIAL
 ========================= */
 
 .footer-social {
@@ -401,13 +401,13 @@ p {
   transition: all 0.2s ease;
 }
 
-.footer-social a svg {
+.social-float a svg {
   width: 26px;
   height: 26px;
   fill: white;
 }
 
-.footer-social a:hover {
+.social-float a:hover {
   background: var(--ff-orange);
   transform: translateY(-2px) scale(1.05);
 }
