@@ -366,9 +366,8 @@ p {
 footer {
   max-width: 1000px;
   margin: 40px auto 0 auto;
+  padding: 25px 20px;
   text-align: center;
-  padding: 25px;
   background: #222;
   color: white;
-  border-radius: 10px;
 }
