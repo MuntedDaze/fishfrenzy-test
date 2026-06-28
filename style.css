@@ -1,3 +1,5 @@
+rewrite my entire css
+
 /* =========================
    DESIGN TOKENS
 ========================= */
@@ -23,38 +25,13 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  color: #fff;
+  color: #222;
   line-height: 1.6;
   background: #222;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
-
-/* =========================
-   GLOBAL LAYOUT SYSTEM
-========================= */
-
-.section {
-  width: 100%;
-  padding: 50px 20px;
-}
-
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-/* backgrounds */
-.section.light {
-  background: #444;
-}
-
-.section.dark {
-  background: #222;
-}
-
-/* =========================
-   TYPOGRAPHY
-========================= */
 
 img {
   max-width: 100%;
@@ -75,7 +52,31 @@ h2 {
 
 p {
   font-size: 16px;
-  margin: 0 0 10px;
+  color: #fff;
+}
+
+/* =========================
+   LAYOUT HELPERS
+========================= */
+
+.section {
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.section.light {
+  background: #444;
+  color: #fff;
+}
+
+.section.dark {
+  background: #222;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -85,10 +86,12 @@ p {
 .quick-info {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 14px;
+  padding: 14px 18px;
   background: #222;
+  color: #fff;
   font-size: 14px;
   text-align: center;
 }
@@ -96,6 +99,7 @@ p {
 .quick-info a {
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
 }
 
 .quick-info a:hover {
@@ -103,8 +107,14 @@ p {
 }
 
 .email-link {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
+  font-weight: 500;
+}
+
+.email-link:hover {
+  color: var(--ff-orange);
 }
 
 /* =========================
@@ -112,14 +122,17 @@ p {
 ========================= */
 
 .hero {
-  background: url("images/hero.jpg") center/cover no-repeat;
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position: center;
   position: relative;
-  min-height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 85vh;
   padding: 20px;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -127,31 +140,48 @@ p {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(var(--ff-orange), var(--ff-orange)) top / 100% 4px no-repeat,
+    linear-gradient(var(--ff-orange), var(--ff-orange)) bottom / 100% 4px no-repeat;
+  z-index: 2;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 800px;
+  position: relative;
+  z-index: 3;
 }
 
 .hero-logo {
   max-width: 320px;
+  width: 100%;
+  height: auto;
+  display: block;
   margin: 0 auto 20px;
 }
 
 .hero h1 {
   font-size: clamp(38px, 6vw, 64px);
   color: #fff;
+  letter-spacing: 2px;
 }
 
 .hero p {
   font-size: clamp(16px, 2vw, 20px);
+  margin-top: 10px;
+  color: #fff;
   opacity: 0.95;
 }
 
 /* =========================
-   SOCIAL FLOAT
+   SOCIAL FLOAT ICONS
 ========================= */
 
 .social-float {
@@ -169,22 +199,22 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255,255,255,0.15);
+  color: white;
   border-radius: 50%;
-  color: #fff;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .social-float a svg {
-  width: 30px;
-  height: 30px;
-  fill: currentColor;
+  width: 32px;
+  height: 32px;
+  fill: white;
 }
 
 .social-float a:hover {
   background: var(--ff-orange);
-  transform: scale(1.05);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* =========================
@@ -200,20 +230,22 @@ p {
   text-decoration: none;
   border-radius: 10px;
   font-weight: 500;
-  transition: 0.2s;
+  transition: color 0.2s ease, transform 0.25s ease;
 }
 
 .btn:hover {
   color: var(--ff-orange);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .btn.secondary {
   background: #555;
 }
 
-/* PDF BUTTONS */
 .pdf-buttons {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -221,7 +253,32 @@ p {
 }
 
 /* =========================
-   MENU SYSTEM
+   STICKY CALL
+========================= */
+
+.sticky-call {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background: var(--ff-blue);
+  color: #fff;
+  padding: 14px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: color 0.2s ease, transform 0.25s ease;
+}
+
+.sticky-call:hover {
+  color: var(--ff-orange);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   MENU
 ========================= */
 
 .menu-category {
@@ -233,6 +290,7 @@ p {
   margin-bottom: 15px;
 }
 
+/* MAIN ROW */
 .menu-item {
   display: flex;
   justify-content: space-between;
@@ -241,32 +299,63 @@ p {
   border-bottom: 1px solid var(--ff-orange);
 }
 
+/* LEFT SIDE (everything except price) */
 .menu-left {
-  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
 }
 
+/* title */
 .menu-title {
   font-weight: 600;
+  color: #fff;
 }
 
+/* DESCRIPTION + ADD SALAD MATCH <p> */
 .menu-left p {
+  margin: 0;
   font-size: 14px;
+  color: #fff;
   opacity: 0.9;
 }
 
+/* RIGHT SIDE (prices only) */
 .menu-right {
-  min-width: 90px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-width: 90px;
 }
 
+/* prices */
 .price {
   font-weight: 600;
+  color: #fff;
   white-space: nowrap;
+}
+
+/* second price (add salad price) */
+.price + .price {
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* DESCRIPTION TEXT */
+.menu-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* FOOTNOTE */
+.menu-note {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
 }
 
 /* =========================
@@ -275,16 +364,22 @@ p {
 
 .photo-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .photo {
   flex: 1;
   min-width: 160px;
   height: 200px;
-  object-fit: cover;
   border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.photo:hover {
+  transform: scale(1.03);
 }
 
 /* =========================
@@ -295,6 +390,9 @@ p {
   margin-top: 20px;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .map iframe {
@@ -308,15 +406,21 @@ p {
 ========================= */
 
 .site-footer {
+  width: 100%;
   background: #222;
+  color: #ddd;
   border-top: 4px solid var(--ff-orange);
 }
 
 .footer-inner {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: auto;
   padding: 40px 20px;
   text-align: center;
+}
+
+.footer-inner p {
+  color: #ddd;
 }
 
 /* =========================
@@ -326,6 +430,7 @@ p {
 .footer-social {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   margin-bottom: 15px;
 }
@@ -338,21 +443,49 @@ p {
   justify-content: center;
   background: rgba(255,255,255,0.12);
   border-radius: 50%;
+  transition: all 0.2s ease;
   color: #fff;
+}
+
+.footer-social a svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+
+.footer-social a:hover {
+  background: var(--ff-orange);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .section {
-    padding: 25px 14px;
+    padding: 20px 14px;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding: 14px;
+  }
+
+  .hero-logo {
+    max-width: 220px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
   }
 
   .btn {
-    width: 100%;
+    width: 70%;
     text-align: center;
   }
 
@@ -360,7 +493,16 @@ p {
     min-width: 100%;
   }
 
-  .hero-logo {
-    max-width: 220px;
+  .social-float {
+    transform: scale(0.9);
+  }
+
+  .menu-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    padding: 14px;
   }
 }
