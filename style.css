@@ -26,7 +26,8 @@ body {
   font-family: 'Inter', sans-serif;
   color: #222;
   line-height: 1.6;
-  background: #fff;
+
+  background: #222;
 
   display: flex;
   flex-direction: column;
@@ -62,6 +63,9 @@ p {
   padding: clamp(50px, 8vw, 80px) 20px;
   max-width: var(--max-width);
   margin: auto;
+
+  background: #fff;
+  border-radius: 12px;
 }
 
 .section.light {
@@ -195,13 +199,6 @@ p {
    BUTTONS
 ========================= */
 
-.hero-buttons {
-  margin-top: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .btn {
   display: inline-block;
   padding: 12px 18px;
@@ -214,25 +211,51 @@ p {
   border-radius: 10px;
   font-weight: 500;
 
-  transition: all 0.25s ease;
+  transition: color 0.2s ease, transform 0.25s ease;
 }
 
-/* PRIMARY HOVER */
+/* PRIMARY: text turns orange ONLY */
 .btn:hover {
-  background: var(--ff-orange);
-  color: #fff;
+  color: var(--ff-orange);
   transform: translateY(-3px);
 }
 
-/* SECONDARY BUTTON */
+/* SECONDARY */
 .btn.secondary {
   background: #555;
   color: #fff;
 }
 
 .btn.secondary:hover {
-  background: #666;
-  color: #fff;
+  color: var(--ff-orange);
+  transform: translateY(-3px);
+}
+
+/* STICKY CALL (TEXT ONLY ORANGE) */
+.sticky-call {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  background: var(--ff-blue);
+  color: white;
+
+  padding: 14px 18px;
+  border-radius: 50px;
+
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  z-index: 999;
+
+  transition: color 0.2s ease, transform 0.25s ease;
+}
+
+.sticky-call:hover {
+  color: var(--ff-orange);
+  transform: translateY(-3px);
 }
 
 /* =========================
@@ -302,32 +325,6 @@ p {
 }
 
 /* =========================
-   STICKY CALL
-========================= */
-
-.sticky-call {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  background: var(--ff-blue);
-  color: white;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  z-index: 999;
-  transition: 0.25s ease;
-}
-
-.sticky-call:hover {
-  color: #fff;
-  background: var(--ff-orange);
-  transform: translateY(-3px);
-}
-
-/* =========================
    MAP
 ========================= */
 
@@ -336,8 +333,9 @@ p {
   border-radius: 10px;
   overflow: hidden;
 
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .map iframe {
@@ -375,9 +373,24 @@ p {
   color: #ddd;
 }
 
+/* =========================
+   FOOTER SOCIAL (FIXED LAYOUT)
+========================= */
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 15px;
+  flex-direction: row;
+}
+
 .footer-social a {
   width: 52px;
   height: 52px;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,19 +404,12 @@ p {
 .footer-social a svg {
   width: 26px;
   height: 26px;
-}
-
-.footer-social a svg path {
   fill: white;
 }
 
 .footer-social a:hover {
   background: var(--ff-orange);
   transform: translateY(-2px) scale(1.05);
-}
-
-.footer-social a:hover svg path {
-  fill: white;
 }
 
 /* =========================
