@@ -420,10 +420,13 @@ p {
 }
 
 @media (max-width: 600px) {
-   
-   .section {
-      margin-bottom: 6px;
-   }
+  .section {
+    padding: 18px 14px;
+  }
+
+  .section + .section {
+    margin-top: 6px;
+  }
    
    .hero {
       min-height: 70vh;
@@ -439,7 +442,7 @@ p {
 }
 
   .btn {
-    width: 50%;
+    width: 70%;
     text-align: center;
   }
 
