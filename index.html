@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fish Frenzy Hobart | Waterfront Fish & Chips & Seafood</title>
 
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<!-- TOP INFO BAR -->
-<div class="quick-info">
+<!-- QUICK INFO -->
+<section class="quick-info">
   <a href="#location">📍 Elizabeth Street Pier, Hobart</a>
   <div>🕒 Open Daily 11:30am - 7:45pm, 8pm on Fri & Sat</div>
   <a class="email-link" href="mailto:info@fishfrenzy.com.au">✉️ info@fishfrenzy.com.au</a>
-</div>
+</section>
 
 <!-- HERO -->
 <header class="hero">
@@ -36,7 +36,7 @@
   </div>
 
   <div class="hero-content">
-    <img src="images/fflogo.png" class="hero-logo" alt="Fish Frenzy Hobart Logo" />
+    <img src="images/fflogo.png" class="hero-logo" alt="Fish Frenzy Hobart Logo">
     <p>Fish & Chips done right on Hobart's waterfront</p>
 
     <div class="hero-buttons">
@@ -94,18 +94,26 @@
 
       <div class="menu-item">
         <div class="menu-left">
-          <div class="menu-title">Mixed Fish & Chips (270g)</div>
-          <p>Blue grenadier & pink ling</p>
+          <div class="menu-title">Mixed Fish & Chips Crumbed - 270g (I - NZ)</div>
+          <p>Two pieces of crumbed blue grenadier & one piece of crumbed pink ling</p>
         </div>
-        <div class="menu-right"><span class="price">$29</span></div>
+        <div class="menu-right"><span class="price">$29.00</span></div>
       </div>
 
       <div class="menu-item">
         <div class="menu-left">
-          <div class="menu-title">Flake & Chips (200g)</div>
-          <p>Beer or tempura batter</p>
+          <div class="menu-title">Flake & Chips Battered - 200g (A - TAS, GFO)</div>
+          <p>Beer batter or tempura batter</p>
         </div>
-        <div class="menu-right"><span class="price">$35</span></div>
+        <div class="menu-right"><span class="price">$35.00</span></div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-left">
+          <div class="menu-title">Fish of the Day & Chips - 200g (GFO)</div>
+          <p>Please see menu board</p>
+        </div>
+        <div class="menu-right"><span class="price">Market Price</span></div>
       </div>
     </div>
 
@@ -115,20 +123,42 @@
 
       <div class="menu-item">
         <div class="menu-left">
-          <div class="menu-title">Shark Attack</div>
-          <p>Crumbed fish & chips</p>
+          <div class="menu-title">Shark Attack (I - NZ)</div>
+          <p>One piece of crumbed pink ling & chips</p>
         </div>
-        <div class="menu-right"><span class="price">$14</span></div>
+        <div class="menu-right"><span class="price">$14.00</span></div>
       </div>
     </div>
 
     <!-- SIDES -->
     <div class="menu-category">
-      <h3>🍟 Sides</h3>
+      <h3>🍟 Chips (GFO)</h3>
 
       <div class="menu-item">
-        <div class="menu-left"><div class="menu-title">Small Chips</div></div>
-        <div class="menu-right"><span class="price">$8</span></div>
+        <div class="menu-left">
+          <div class="menu-title">Small Chips</div>
+        </div>
+        <div class="menu-right"><span class="price">$8.00</span></div>
+      </div>
+
+      <div class="menu-item">
+        <div class="menu-left">
+          <div class="menu-title">Large Chips</div>
+        </div>
+        <div class="menu-right"><span class="price">$14.00</span></div>
+      </div>
+    </div>
+
+    <!-- PLATTERS -->
+    <div class="menu-category">
+      <h3>🦐 Platters & Seafood</h3>
+
+      <div class="menu-item">
+        <div class="menu-left">
+          <div class="menu-title">Pier Platter (2–4 people)</div>
+          <p>Mixed seafood selection</p>
+        </div>
+        <div class="menu-right"><span class="price">$149.00</span></div>
       </div>
     </div>
 
@@ -139,9 +169,9 @@
 <section class="section light">
   <div class="container">
     <div class="photo-row">
-      <img src="images/dan.jpg" class="photo" />
-      <img src="images/frenzylemon.jpg" class="photo" />
-      <img src="images/peta.jpg" class="photo" />
+      <img src="images/dan.jpg" class="photo">
+      <img src="images/frenzylemon.jpg" class="photo">
+      <img src="images/peta.jpg" class="photo">
     </div>
   </div>
 </section>
@@ -149,7 +179,8 @@
 <!-- LOCATION -->
 <section class="section dark" id="location">
   <div class="container">
-    <p>Elizabeth Street Pier, Hobart Waterfront</p>
+
+    <p>Elizabeth Street Pier, Hobart Waterfront — 5 minutes from CBD.</p>
 
     <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fish+Frenzy+Hobart" target="_blank">
       Open in Google Maps
@@ -158,9 +189,13 @@
     <div class="map">
       <iframe
         src="https://www.google.com/maps?q=Fish+Frenzy+Elizabeth+Street+Pier+Hobart&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
         loading="lazy">
       </iframe>
     </div>
+
   </div>
 </section>
 
@@ -172,9 +207,9 @@
   <div class="footer-inner">
 
     <div class="footer-social">
-      <a href="https://facebook.com" target="_blank">FB</a>
-      <a href="https://instagram.com" target="_blank">IG</a>
-      <a href="https://tiktok.com" target="_blank">TT</a>
+      <a href="https://facebook.com">FB</a>
+      <a href="https://instagram.com">IG</a>
+      <a href="https://tiktok.com">TT</a>
     </div>
 
     <p>📍 Elizabeth Street Pier, Hobart</p>
