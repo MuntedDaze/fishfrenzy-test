@@ -364,10 +364,12 @@ p {
 ========================= */
 
 footer {
-  max-width: 1000px;
-  margin: 40px auto 0 auto;
-  padding: 25px 20px;
-  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 20px;
   background: #222;
   color: white;
+  text-align: center;
+
+  border-top: 4px solid var(--ff-orange);
 }
