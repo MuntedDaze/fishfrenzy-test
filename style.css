@@ -87,6 +87,7 @@ p {
 .quick-info {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   padding: 14px 18px;
@@ -108,7 +109,6 @@ p {
 
 .email-link {
   display: inline-block;
-  margin-top: 10px;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
