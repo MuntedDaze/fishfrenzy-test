@@ -62,7 +62,7 @@ p {
    max-width: 1400px;
    margin: 0 auto;
    padding: clamp(50px, 8vw, 80px) 20px;
-   margin-bottom: 30px;
+   margin-bottom: 10px;
 }
 
 .section.light {
