@@ -345,7 +345,7 @@ p {
    RESPONSIVE
 ========================= */
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
   .section {
     padding: 25px 14px;
