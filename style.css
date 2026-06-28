@@ -1,40 +1,6 @@
 /* =========================
-   BASE / GLOBAL STYLES
+   MOBILE MENU ACCORDION (ADDITION ONLY)
 ========================= */
-
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #222;
-  line-height: 1.6;
-  background: #fff;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-h1, h2, h3 {
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-/* COLOURS */
-:root {
-  --ff-blue: #0b3d91;
-  --ff-orange: #f57c00;
-}
-
-/* HERO, BUTTONS, SOCIAL FLOAT = unchanged */
-
-/* MENU */
-.menu-category {
-  margin-top: 40px;
-}
 
 .menu-toggle {
   cursor: pointer;
@@ -47,26 +13,7 @@ h2 {
   display: block;
 }
 
-.menu-item {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.menu-title {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 600;
-}
-
-.menu-title span {
-  color: #0b3d91;
-  white-space: nowrap;
-}
-
-/* =========================
-   MOBILE ACCORDION ONLY
-========================= */
-
+/* MOBILE ONLY */
 @media (max-width: 768px) {
 
   .menu-content {
