@@ -57,9 +57,10 @@ p {
 ========================= */
 
 .section {
-  padding: clamp(50px, 8vw, 80px) 20px;
+  width: 100%;
   max-width: var(--max-width);
-  margin: auto;
+  margin: 0 auto;
+  padding: clamp(50px, 8vw, 80px) 20px;
   background: #fff;
   border-radius: 12px;
 }
