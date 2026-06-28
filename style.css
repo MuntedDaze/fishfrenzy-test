@@ -373,3 +373,75 @@ footer {
   border-top: 4px solid var(--ff-orange);
   box-sizing: border-box;
 }
+
+/* =========================
+   FOOTER (FULL WIDTH FIX)
+========================= */
+
+.site-footer {
+  width: 100%;
+  background: #222;
+  color: white;
+  border-top: 4px solid var(--ff-orange);
+}
+
+/* center content but keep full-width background */
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* footer social icons (NOT floating) */
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.footer-social a svg {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.footer-social a:hover {
+  background: var(--ff-orange);
+  transform: translateY(-2px);
+}
+
+/* footer text spacing */
+.footer-inner p {
+  margin: 6px 0;
+  color: #ddd;
+  font-size: 14px;
+}
+
+.footer-copy {
+  margin-top: 15px;
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: #222; /* matches footer */
+}
