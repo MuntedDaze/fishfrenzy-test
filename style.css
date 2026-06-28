@@ -267,7 +267,7 @@ p {
 
 .menu-item {
   padding: 12px 0;
-  border-bottom: 2px solid var(--ff-blue);
+  border-bottom: 1px solid var(--ff-orange);
 }
 
 .menu-title {
