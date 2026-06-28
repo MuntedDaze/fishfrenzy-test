@@ -1,27 +1,24 @@
 /* =========================
-   PAGE FIX (IMPORTANT)
+   ROOT / VARIABLES
 ========================= */
 
-html, body {
-  height: 100%;
+:root {
+  --ff-blue: #0b3d91;
+  --ff-orange: #f57c00;
 }
-
-body {
-  margin: 0;
-  background: #fff;
-  display: flex;
-  flex-direction: column;
-}
-
-/* makes page stretch properly */
-main {
-  flex: 1;
-}
-
 
 /* =========================
    BASE / GLOBAL STYLES
 ========================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -29,10 +26,9 @@ body {
   color: #222;
   line-height: 1.6;
   background: #fff;
-}
 
-html {
-  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -50,13 +46,9 @@ p {
   color: #333;
 }
 
-/* =========================
-   COLOURS
-========================= */
-
-:root {
-  --ff-blue: #0b3d91;
-  --ff-orange: #f57c00;
+/* makes page stretch properly */
+main {
+  flex: 1;
 }
 
 /* =========================
@@ -240,7 +232,7 @@ p {
 }
 
 /* =========================
-   MENU GRID
+   MENU STYLES
 ========================= */
 
 .menu-grid {
@@ -328,7 +320,7 @@ p {
 }
 
 /* =========================
-   SOCIAL LINKS
+   SOCIAL LINKS (TEXT LINKS)
 ========================= */
 
 .social-links {
@@ -346,7 +338,7 @@ p {
 }
 
 /* =========================
-   STICKY CALL
+   STICKY CALL BUTTON
 ========================= */
 
 .sticky-call {
@@ -381,7 +373,7 @@ p {
 }
 
 /* =========================
-   FOOTER (FULL WIDTH FIX)
+   FOOTER
 ========================= */
 
 .site-footer {
@@ -391,7 +383,6 @@ p {
   border-top: 4px solid var(--ff-orange);
 }
 
-/* center content but keep full-width background */
 .footer-inner {
   max-width: 1000px;
   margin: 0 auto;
@@ -399,7 +390,6 @@ p {
   text-align: center;
 }
 
-/* footer social icons (NOT floating) */
 .footer-social {
   display: flex;
   justify-content: center;
@@ -430,7 +420,6 @@ p {
   transform: translateY(-2px);
 }
 
-/* footer text spacing */
 .footer-inner p {
   margin: 6px 0;
   color: #ddd;
