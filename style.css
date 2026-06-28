@@ -214,17 +214,25 @@ p {
   border-radius: 10px;
   font-weight: 500;
 
-  transition: 0.25s ease;
+  transition: all 0.25s ease;
 }
 
+/* PRIMARY HOVER */
 .btn:hover {
-  color: #fff;
   background: var(--ff-orange);
+  color: #fff;
   transform: translateY(-3px);
 }
 
+/* SECONDARY BUTTON */
 .btn.secondary {
   background: #555;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background: #666;
+  color: #fff;
 }
 
 /* =========================
@@ -367,13 +375,6 @@ p {
   color: #ddd;
 }
 
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
 .footer-social a {
   width: 52px;
   height: 52px;
@@ -390,12 +391,19 @@ p {
 .footer-social a svg {
   width: 26px;
   height: 26px;
+}
+
+.footer-social a svg path {
   fill: white;
 }
 
 .footer-social a:hover {
   background: var(--ff-orange);
   transform: translateY(-2px) scale(1.05);
+}
+
+.footer-social a:hover svg path {
+  fill: white;
 }
 
 /* =========================
