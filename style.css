@@ -280,13 +280,13 @@ p {
 
 .menu-title span {
   white-space: nowrap;
-  color: #111;
+  color: #fff;
 }
 
 .menu-item p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #fff;
+  color: #111;
 }
 
 .menu-note {
