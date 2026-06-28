@@ -267,7 +267,7 @@ p {
 
 .menu-item {
   padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #111;
 }
 
 .menu-title {
@@ -292,7 +292,7 @@ p {
 .menu-note {
   margin-top: 30px;
   font-size: 13px;
-  color: #111;
+  color: #fff;
 }
 
 /* =========================
