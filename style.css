@@ -65,11 +65,12 @@ p {
 }
 
 .section.light {
-  background: #f9f9f9;
+  background: #444;
+  color: #fff;
 }
 
 .section.dark {
-  background: #444;
+  background: #222;
   color: #fff;
 }
 
