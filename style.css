@@ -58,14 +58,6 @@ p {
   margin: 0;
 }
 
-.section p {
-  margin-bottom: 10px;
-}
-
-.section p:last-child {
-  margin-bottom: 0;
-}
-
 /* =========================
    LAYOUT HELPERS
 ========================= */
@@ -73,6 +65,14 @@ p {
 .section {
   width: 100%;
   padding: 40px 20px;
+}
+
+.section p {
+  margin-bottom: 10px;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
 }
 
 .section.light {
