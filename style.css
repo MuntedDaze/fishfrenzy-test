@@ -58,11 +58,11 @@ p {
 ========================= */
 
 .section {
-   width: 100%;
-   max-width: 1400px;
-   margin: 0 auto;
-   padding: clamp(50px, 8vw, 80px) 20px;
-   margin-bottom: 1px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  margin-bottom: 10px;
 }
 
 .section.light {
