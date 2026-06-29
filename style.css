@@ -480,9 +480,4 @@ p {
   .container {
     padding: 14px;
   }
-   
-   .sticky-call {
-    bottom: 20px;
-    right: 20px;
-  }
 }
