@@ -320,6 +320,15 @@ p {
   word-break: break-word;
 }
 
+.menu-sub {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+}
+
 .menu-left {
   display: flex;
   flex-direction: column;
@@ -341,15 +350,6 @@ p {
   gap: 6px;
   min-width: 140px;
   text-align: right;
-}
-
-.menu-sub {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  line-height: 1.2;
-  margin: 0;
 }
 
 .menu-tags {
