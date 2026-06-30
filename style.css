@@ -289,7 +289,6 @@ iframe:focus-visible {
 .menu-item {
   padding: 12px 0;
   border-bottom: 1px solid var(--ff-orange);
-  border-radius: 6px;
   transition: background-color var(--speed), color var(--speed);
 }
 
