@@ -44,12 +44,11 @@ img {
 h1, h2, h3 {
   font-weight: 600;
   letter-spacing: 0.3px;
-  color: var(--ff-orange);
   margin: 0;
 }
 
 h3 {
-     color: var(--ff-orange);
+   color: var(--ff-orange);
 }
 
 p {
