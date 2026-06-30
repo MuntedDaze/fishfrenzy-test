@@ -219,6 +219,13 @@ iframe:focus-visible {
   margin-top: 0;
 }
 
+.menu-interaction-note {
+  margin-top: 12px;
+  color: var(--ff-white-soft);
+  font-size: 14px;
+  text-align: center;
+}
+
 .btn,
 .sticky-call {
   display: inline-flex;
@@ -282,25 +289,30 @@ iframe:focus-visible {
 .menu-item {
   padding: 12px 0;
   border-bottom: 1px solid var(--ff-orange);
-  transition: background-color var(--speed), padding-inline var(--speed);
+  border-radius: 6px;
+  transition: background-color var(--speed), color var(--speed);
 }
 
 .menu-item--interactive {
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-item--interactive:hover,
 .menu-item--interactive:focus-visible {
-  padding-inline: 10px;
   background: rgba(255, 255, 255, 0.06);
   outline: none;
 }
 
+.menu-item--interactive:active {
+  background: rgba(245, 124, 0, 0.16);
+}
+
 .menu-line {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content;
   align-items: flex-start;
-  gap: 20px;
+  gap: 24px;
 }
 
 .menu-line--sub {
@@ -310,7 +322,13 @@ iframe:focus-visible {
 .menu-item h3 {
   font-size: 16px;
   line-height: 1.25;
-  word-break: break-word;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
+
+.menu-origin {
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .menu-desc {
@@ -325,6 +343,7 @@ iframe:focus-visible {
   flex: 0 0 auto;
   font-weight: 600;
   line-height: 1.25;
+  text-align: right;
   white-space: nowrap;
 }
 
@@ -468,6 +487,17 @@ iframe:focus-visible {
   text-align: center;
 }
 
+@media (min-width: 651px) {
+  .menu-item {
+    transition: background-color var(--speed), color var(--speed), padding-inline var(--speed);
+  }
+
+  .menu-item--interactive:hover,
+  .menu-item--interactive:focus-visible {
+    padding-inline: 10px;
+  }
+}
+
 @media (max-width: 650px) {
   :root {
     --section-padding: 24px;
@@ -506,16 +536,37 @@ iframe:focus-visible {
     height: 24px;
   }
 
+  .button-group {
+    align-items: center;
+  }
+
   .btn {
-    width: min(100%, 320px);
+    width: auto;
+    max-width: 100%;
   }
 
   .menu-line {
-    gap: 12px;
+    grid-template-columns: minmax(0, 1fr) minmax(64px, max-content);
+    gap: 16px;
+  }
+
+  .menu-item--interactive:hover,
+  .menu-item--interactive:focus-visible,
+  .menu-item--interactive:active {
+    padding-inline: 0;
+    background: transparent;
   }
 
   .price {
     font-size: 14px;
+  }
+
+  .menu-desc {
+    max-width: calc(100% - 78px);
+  }
+
+  .menu-line--sub .menu-desc {
+    max-width: none;
   }
 
   .photo-row {
@@ -524,6 +575,7 @@ iframe:focus-visible {
 
   .menu-modal {
     padding: 12px;
+    background: rgba(0, 0, 0, 0.84);
   }
 
   .menu-modal__image-wrap {
