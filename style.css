@@ -312,12 +312,11 @@ p {
 }
 
 .menu-title {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
   line-height: 1.2;
   color: #fff;
-  align-items: center;
   word-break: break-word;
 }
 
@@ -331,7 +330,7 @@ p {
 .menu-left {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 
 .menu-right {
@@ -345,6 +344,7 @@ p {
 }
 
 .menu-sub {
+  display: block;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
