@@ -304,10 +304,9 @@ p {
 
 .menu-item {
   display: grid;
-  grid-template-columns: 1fr 140px;
+  grid-template-columns: 1fr auto;
   gap: 20px;
   padding: 12px 0;
-  border-bottom: 1px solid var(--ff-orange);
   align-items: start;
 }
 
@@ -322,21 +321,25 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  line-height: 1.2;
   color: #fff;
-  align-items: baseline;
+  align-items: center;
+  word-break: break-word;
 }
 
 .menu-left p {
   margin: 0;
   font-size: 14px;
   color: #fff;
-  opacity: 0.9;
 }
 
 .menu-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  min-width: 140px;
   text-align: right;
 }
 
@@ -357,6 +360,14 @@ p {
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
+}
+
+.price-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  line-height: 1.1;
 }
 
 .menu-note {
@@ -497,5 +508,14 @@ p {
 
   .container {
     padding: 14px;
+  }
+
+     .menu-item {
+    grid-template-columns: 1fr 110px;
+    gap: 10px;
+  }
+
+  .menu-right {
+    min-width: 110px;
   }
 }
