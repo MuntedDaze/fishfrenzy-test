@@ -505,13 +505,4 @@ p {
   .container {
     padding: 14px;
   }
-
-     .menu-item {
-    grid-template-columns: 1fr 110px;
-    gap: 10px;
-  }
-
-  .menu-right {
-    min-width: 110px;
-  }
 }
