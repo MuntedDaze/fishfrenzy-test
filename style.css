@@ -282,6 +282,18 @@ iframe:focus-visible {
 .menu-item {
   padding: 12px 0;
   border-bottom: 1px solid var(--ff-orange);
+  transition: background-color var(--speed), padding-inline var(--speed);
+}
+
+.menu-item--interactive {
+  cursor: pointer;
+}
+
+.menu-item--interactive:hover,
+.menu-item--interactive:focus-visible {
+  padding-inline: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  outline: none;
 }
 
 .menu-line {
@@ -353,6 +365,97 @@ iframe:focus-visible {
   transform: scale(1.03);
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
+.menu-modal[hidden] {
+  display: none;
+}
+
+.menu-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.menu-modal__panel {
+  position: relative;
+  width: min(100%, 760px);
+  max-height: min(760px, 90vh);
+  overflow: auto;
+  background: var(--ff-dark);
+  border: 1px solid var(--ff-border-soft);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.menu-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: var(--ff-white);
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid var(--ff-border-soft);
+  border-radius: 50%;
+  cursor: pointer;
+  font: inherit;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.menu-modal__close:hover,
+.menu-modal__close:focus-visible {
+  background: var(--ff-orange);
+}
+
+.menu-modal__image-wrap {
+  display: grid;
+  place-items: center;
+  min-height: 280px;
+  background: var(--ff-dark-light);
+}
+
+.menu-modal__image-wrap img {
+  width: 100%;
+  max-height: 440px;
+  object-fit: cover;
+}
+
+.menu-modal__image-wrap p {
+  color: var(--ff-white-soft);
+  font-weight: 600;
+}
+
+.menu-modal__content {
+  padding: 22px;
+}
+
+.menu-modal__content h2 {
+  color: var(--ff-orange);
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.menu-modal__desc {
+  margin-top: 10px;
+  color: var(--ff-white-soft);
+}
+
+.menu-modal__price {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
 .site-footer {
   width: 100%;
   border-top: 4px solid var(--ff-orange);
@@ -417,5 +520,17 @@ iframe:focus-visible {
 
   .photo-row {
     grid-template-columns: 1fr;
+  }
+
+  .menu-modal {
+    padding: 12px;
+  }
+
+  .menu-modal__image-wrap {
+    min-height: 220px;
+  }
+
+  .menu-modal__content {
+    padding: 18px;
   }
 }
