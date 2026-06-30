@@ -289,6 +289,16 @@ p {
    MENU
 ========================= */
 
+.menu-category {
+  margin-top: 40px;
+}
+
+.menu-category h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* ITEM WRAPPER */
 .menu-item {
   display: flex;
   flex-direction: column;
@@ -297,43 +307,44 @@ p {
   border-bottom: 1px solid var(--ff-orange);
 }
 
-/* EACH LINE = FLEX ROW */
+/* ROW SYSTEM */
 .menu-line {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   gap: 20px;
 }
 
-/* LEFT TEXT */
-.menu-title,
-.menu-desc {
-  color: #fff;
-}
-
+/* TEXT */
 .menu-title {
   font-size: 16px;
   font-weight: 600;
+  color: #fff;
   line-height: 1.2;
+  word-break: break-word;
 }
 
 .menu-desc {
   font-size: 14px;
+  color: #fff;
   opacity: 0.9;
+  line-height: 1.3;
 }
 
-/* RIGHT PRICES */
+/* PRICE */
 .price {
   font-weight: 600;
   color: #fff;
   white-space: nowrap;
 }
 
-/* stacked price block still works */
-.price-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
+/* FOOTNOTE */
+.menu-note {
+  margin-top: 30px;
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
 }
 
 /* =========================
