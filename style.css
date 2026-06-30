@@ -291,10 +291,6 @@ p {
 
 .menu-category {
   margin-top: 40px;
-  max-width: var(--max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 20px;
 }
 
 .menu-category h3 {
@@ -308,7 +304,7 @@ p {
   border-bottom: 1px solid var(--ff-orange);
   gap: 20px;
   padding: 12px 0;
-  align-items: start;
+  align-items: baseline;
 }
 
 .menu-title {
@@ -339,7 +335,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 6px;
   min-width: 140px;
   text-align: right;
