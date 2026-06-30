@@ -123,6 +123,11 @@ a:hover {
   color: var(--ff-orange);
 }
 
+.quick-info > * {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* =========================
    HERO
 ========================= */
