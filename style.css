@@ -336,6 +336,12 @@ p {
   min-width: 90px;
 }
 
+.menu-sub {
+  margin-top: 4px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
 .price {
   font-weight: 600;
   color: #fff;
