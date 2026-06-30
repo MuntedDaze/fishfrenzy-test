@@ -92,7 +92,6 @@ p {
   flex-wrap: wrap;
   gap: 20px;
   padding: 14px 18px;
-  background: #111;
   font-size: 14px;
   text-align: center;
 }
@@ -226,6 +225,7 @@ p {
 
 .pdf-buttons {
   display: flex;
+  background: var(--ff-blue);
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
@@ -359,8 +359,6 @@ p {
 ========================= */
 
 .site-footer {
-  background: #222;
-  color: #ddd;
   border-top: 4px solid var(--ff-orange);
   width: 100%;
 }
