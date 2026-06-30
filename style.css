@@ -80,7 +80,7 @@ a:hover {
 }
 
 .section.light {
-  background: #444;
+  background: #333;
 }
 
 .container {
@@ -110,15 +110,6 @@ a:hover {
 }
 
 .quick-info a:hover {
-  color: var(--ff-orange);
-}
-
-.email-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.email-link:hover {
   color: var(--ff-orange);
 }
 
