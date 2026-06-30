@@ -56,6 +56,15 @@ p {
   margin: 0;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--ff-orange);
+}
+
 /* =========================
    LAYOUT HELPERS
 ========================= */
@@ -85,6 +94,7 @@ p {
 
 .quick-info {
   display: flex;
+  color: #fff;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -94,8 +104,18 @@ p {
   text-align: center;
 }
 
+.quick-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .quick-info a:hover {
   color: var(--ff-orange);
+}
+
+.email-link {
+  color: #fff;
+  text-decoration: none;
 }
 
 .email-link:hover {
@@ -181,6 +201,7 @@ p {
   align-items: center;
   justify-content: center;
   background: rgba(0,0,0,0.55);
+  color: #fff;
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 50%;
   transition: 0.2s ease;
@@ -206,6 +227,8 @@ p {
   padding: 12px 18px;
   margin: 5px;
   background: var(--ff-blue);
+  color: #fff;
+  text-decoration: none;
   border-radius: 10px;
   font-weight: 500;
   transition: 0.2s ease;
@@ -218,11 +241,11 @@ p {
 
 .btn.secondary {
   background: #555;
+  color: #fff;
 }
 
 .pdf-buttons {
   display: flex;
-  background: var(--ff-blue);
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
@@ -243,6 +266,7 @@ p {
   border-radius: 50px;
   font-weight: 600;
   font-size: 14px;
+  color: #fff;
   text-decoration: none;
   z-index: 999;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -385,6 +409,7 @@ p {
   align-items: center;
   justify-content: center;
   background: rgba(255,255,255,0.12);
+  color: #fff;
   border-radius: 50%;
   transition: 0.2s ease;
 }
