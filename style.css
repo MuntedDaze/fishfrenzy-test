@@ -89,6 +89,16 @@ a:hover {
   width: 100%;
 }
 
+.awards {
+  margin-top: 15px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.awards p {
+  margin-bottom: 6px;
+}
+
 /* =========================
    QUICK INFO BAR
 ========================= */
