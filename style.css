@@ -311,13 +311,6 @@ p {
   align-items: start;
 }
 
-.menu-left {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-}
-
 .menu-title {
   display: flex;
   flex-wrap: wrap;
@@ -326,6 +319,13 @@ p {
   color: #fff;
   align-items: center;
   word-break: break-word;
+}
+
+.menu-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
 }
 
 .menu-left p {
