@@ -146,7 +146,7 @@
         <section class="menu-category" aria-labelledby="favourites-heading">
           <h2 id="favourites-heading">👑 Frenzy Favourites</h2>
 
-          <article class="menu-item">
+          <article class="menu-item" data-image="images/frenzylemon.jpg">
             <div class="menu-line">
               <h3>Fish Frenzy (M - TAS, A & NZ)</h3>
               <p class="price">$34.00</p>
@@ -372,6 +372,21 @@
     </section>
   </main>
 
+  <div class="menu-modal" id="menu-modal" role="dialog" aria-modal="true" aria-labelledby="menu-modal-title" hidden>
+    <div class="menu-modal__panel">
+      <button class="menu-modal__close" type="button" aria-label="Close menu item popup">&times;</button>
+      <div class="menu-modal__image-wrap">
+        <img id="menu-modal-image" src="" alt="" hidden>
+        <p id="menu-modal-placeholder">Photo coming soon</p>
+      </div>
+      <div class="menu-modal__content">
+        <h2 id="menu-modal-title"></h2>
+        <p class="menu-modal__desc" id="menu-modal-desc"></p>
+        <p class="menu-modal__price" id="menu-modal-price"></p>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner content-stack">
       <nav class="social-links" aria-label="Social media">
@@ -391,5 +406,90 @@
       <a href="mailto:info@fishfrenzy.com.au">✉️ info@fishfrenzy.com.au</a>
     </div>
   </footer>
+
+  <script>
+    (() => {
+      const modal = document.querySelector("#menu-modal");
+      const modalPanel = modal.querySelector(".menu-modal__panel");
+      const closeButton = modal.querySelector(".menu-modal__close");
+      const modalImage = modal.querySelector("#menu-modal-image");
+      const modalPlaceholder = modal.querySelector("#menu-modal-placeholder");
+      const modalTitle = modal.querySelector("#menu-modal-title");
+      const modalDesc = modal.querySelector("#menu-modal-desc");
+      const modalPrice = modal.querySelector("#menu-modal-price");
+      const menuItems = document.querySelectorAll(".menu-item");
+      let lastFocusedElement = null;
+
+      const closeModal = () => {
+        modal.hidden = true;
+        document.body.classList.remove("modal-open");
+        modalImage.hidden = true;
+        modalImage.removeAttribute("src");
+
+        if (lastFocusedElement) {
+          lastFocusedElement.focus();
+        }
+      };
+
+      const openModal = (item) => {
+        const title = item.querySelector("h3")?.textContent.trim() || "";
+        const descriptions = [...item.querySelectorAll(".menu-desc")].map((desc) => desc.textContent.trim());
+        const prices = [...item.querySelectorAll(".price")].map((price) => price.textContent.trim());
+        const imageSrc = item.dataset.image;
+
+        lastFocusedElement = document.activeElement;
+        modalTitle.textContent = title;
+        modalDesc.textContent = descriptions.join(" ");
+        modalPrice.textContent = prices.join(" / ");
+
+        if (imageSrc) {
+          modalImage.src = imageSrc;
+          modalImage.alt = title;
+          modalImage.hidden = false;
+          modalPlaceholder.hidden = true;
+        } else {
+          modalImage.hidden = true;
+          modalPlaceholder.hidden = false;
+        }
+
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+        closeButton.focus();
+      };
+
+      menuItems.forEach((item) => {
+        item.classList.add("menu-item--interactive");
+        item.setAttribute("role", "button");
+        item.setAttribute("tabindex", "0");
+        item.setAttribute("aria-label", `View ${item.querySelector("h3")?.textContent.trim() || "menu item"}`);
+
+        item.addEventListener("click", () => openModal(item));
+        item.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openModal(item);
+          }
+        });
+      });
+
+      modalImage.addEventListener("error", () => {
+        modalImage.hidden = true;
+        modalPlaceholder.hidden = false;
+      });
+
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (!modalPanel.contains(event.target)) {
+          closeModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) {
+          closeModal();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
