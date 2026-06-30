@@ -234,14 +234,14 @@ a:hover {
   transition: 0.2s ease;
 }
 
-.btn:hover {
-  color: var(--ff-orange);
-  transform: translateY(-3px);
-}
-
 .btn.secondary {
   background: #555;
   color: #fff;
+}
+
+.btn:hover {
+  color: var(--ff-orange);
+  transform: translateY(-3px);
 }
 
 .pdf-buttons {
