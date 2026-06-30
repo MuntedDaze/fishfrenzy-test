@@ -333,13 +333,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  flex: 1;
-}
-
-.menu-left {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
 }
 
 .menu-right {
