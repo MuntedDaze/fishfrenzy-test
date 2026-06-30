@@ -322,6 +322,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  color: #fff;
   align-items: baseline;
 }
 
