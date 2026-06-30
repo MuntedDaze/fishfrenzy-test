@@ -201,7 +201,6 @@ a:hover {
 .social-float a svg {
   width: 30px;
   height: 30px;
-  fill: #fff;
 }
 
 .social-float a:hover {
@@ -233,6 +232,13 @@ a:hover {
 .btn:hover {
   color: var(--ff-orange);
   transform: translateY(-3px);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 .pdf-buttons {
@@ -408,7 +414,6 @@ a:hover {
 .footer-social a svg {
   width: 26px;
   height: 26px;
-  fill: #fff;
 }
 
 .footer-social a:hover {
