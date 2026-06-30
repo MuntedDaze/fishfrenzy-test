@@ -201,6 +201,7 @@ a:hover {
 .social-float a svg {
   width: 30px;
   height: 30px;
+  fill: currentColor;
 }
 
 .social-float a:hover {
@@ -414,6 +415,7 @@ a:hover {
 .footer-social a svg {
   width: 26px;
   height: 26px;
+  fill: currentColor;
 }
 
 .footer-social a:hover {
