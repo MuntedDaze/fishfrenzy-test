@@ -168,6 +168,10 @@ a:hover {
   max-width: 800px;
   position: relative;
   z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-logo {
