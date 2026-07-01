@@ -220,9 +220,11 @@ iframe:focus-visible {
 }
 
 .menu-interaction-note {
-  margin-top: 12px;
+  margin-top: 18px;
+  margin-bottom: 28px;
   color: var(--ff-white-soft);
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -287,10 +289,19 @@ iframe:focus-visible {
 }
 
 .menu-item {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--ff-orange);
-  border-radius: 6px;
+  position: relative;
+  padding: 12px 0 13px;
   transition: background-color var(--speed), color var(--speed);
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background: var(--ff-orange);
 }
 
 .menu-item--interactive {
@@ -511,6 +522,11 @@ iframe:focus-visible {
     gap: 8px 14px;
   }
 
+  a:hover,
+  a:focus-visible {
+    color: inherit;
+  }
+
   .hero {
     min-height: 70vh;
     padding: 72px 14px 28px;
@@ -536,6 +552,18 @@ iframe:focus-visible {
     height: 24px;
   }
 
+  .social-links a:hover,
+  .social-links a:focus-visible {
+    color: var(--ff-white);
+    background: rgba(255, 255, 255, 0.12);
+    transform: none;
+  }
+
+  .social-links--float a:hover,
+  .social-links--float a:focus-visible {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
   .button-group {
     align-items: center;
   }
@@ -543,6 +571,20 @@ iframe:focus-visible {
   .btn {
     width: auto;
     max-width: 100%;
+  }
+
+  .btn:hover,
+  .btn:focus-visible,
+  .sticky-call:hover,
+  .sticky-call:focus-visible {
+    color: var(--ff-white);
+    background: var(--ff-blue);
+    transform: none;
+  }
+
+  .btn--secondary:hover,
+  .btn--secondary:focus-visible {
+    background: var(--ff-grey);
   }
 
   .menu-line {
@@ -555,6 +597,10 @@ iframe:focus-visible {
   .menu-item--interactive:active {
     padding-inline: 0;
     background: transparent;
+  }
+
+  .photo:hover {
+    transform: none;
   }
 
   .price {
