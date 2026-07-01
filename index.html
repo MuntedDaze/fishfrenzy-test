@@ -14,7 +14,13 @@
   <meta property="og:description" content="Fresh fish & chips, seafood, chowder and salads on Hobart's waterfront. Dine in or takeaway.">
   <meta property="og:url" content="https://fishfrenzy.com.au/">
   <meta property="og:image" content="https://fishfrenzy.com.au/images/og-image.jpg">
+  <meta property="og:locale" content="en_AU">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fish Frenzy Hobart | Waterfront Fish & Chips & Seafood">
+  <meta name="twitter:description" content="Fresh fish & chips, seafood, chowder and salads on Hobart's waterfront. Dine in or takeaway.">
+  <meta name="twitter:image" content="https://fishfrenzy.com.au/images/og-image.jpg">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3d91">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,12 +37,22 @@
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
+    "@id": "https://fishfrenzy.com.au/#restaurant",
     "name": "Fish Frenzy Hobart",
+    "description": "Fish Frenzy Hobart is a waterfront seafood restaurant famous for fresh fish & chips, grilled seafood, chowder and salads on Elizabeth Street Pier. Dine in or takeaway.",
     "image": "https://fishfrenzy.com.au/images/restaurant.jpg",
     "telephone": "+61362312134",
+    "email": "info@fishfrenzy.com.au",
     "url": "https://fishfrenzy.com.au",
     "priceRange": "$$",
+    "acceptsReservations": false,
+    "hasMap": "https://www.google.com/maps?q=Fish+Frenzy+Elizabeth+Street+Pier+Hobart",
+    "hasMenu": "https://fishfrenzy.com.au/pdf/fish_frenzy_food_menu.pdf",
     "servesCuisine": ["Seafood", "Fish and Chips"],
+    "sameAs": [
+      "https://www.facebook.com/FishFrenzyHobart/",
+      "https://www.instagram.com/fishfrenzyhbt/?hl=en"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Elizabeth Street Pier",
@@ -44,7 +60,21 @@
       "addressRegion": "TAS",
       "postalCode": "7000",
       "addressCountry": "AU"
-    }
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+        "opens": "11:30",
+        "closes": "19:45"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "11:30",
+        "closes": "20:00"
+      }
+    ]
   }
   </script>
 </head>
@@ -347,7 +377,7 @@
         </section>
 
         <div class="menu-note">
-          <p><strong>Seafood Origin:</strong> (A) Australia | (I) Imported | (M) Mixed | (TAS) Tasmania | (NZ) New Zealand</p>
+          <p><strong>Seafood Origin:</strong> <span class="menu-origin">(A) Australia</span> | <span class="menu-origin">(I) Imported</span> | <span class="menu-origin">(M) Mixed</span> | <span class="menu-origin">(TAS) Tasmania</span> | <span class="menu-origin">(NZ) New Zealand</span></p>
           <p>(GFO) Gluten free options available on request</p>
           <p>Please advise staff of any allergies</p>
         </div>
